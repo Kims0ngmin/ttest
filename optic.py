@@ -55,7 +55,7 @@ while True:
     hsv[..., 0] = ang*180/np.pi/2
     hsv[..., 2] = cv2.normalize(mag, None, 0, 255, cv2.NORM_MINMAX)
 
-    bgr = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
+    bgr = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)  
 
     # 모션 벡터 평균 계산
     avg_mag = np.mean(mag)
